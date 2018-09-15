@@ -9,7 +9,7 @@
   <title>The Title</title>
   <meta name="Description" content="Content Description">
 
-  <!-- Default Bootstrap CSS -->
+  <!-- Bootstrap 4 CSS -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- Font awesome 5 -->
   <link rel="stylesheet" href="css/all.css">
@@ -21,13 +21,13 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg bg-color-1 justify-content-center d-flex">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
       aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon d-flex align-items-center justify-content-center"><i class="fas fa-bars"></i></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
-      <ul class="navbar-nav">
+    <div class="collapse navbar-collapse justify-content-center navbar-top" id="navbarNavDropdown">
+      <ul class="navbar-nav d-flex justify-content-between w-100">
         <li class="nav-item active dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarAkt" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">Aktualności <span class="sr-only">(current)</span></a>
@@ -77,22 +77,29 @@
     <header>
       <div class="row row-header d-flex flex-row">
         <div class="col-md-auto">
-          <div class="row-header__logo-c"><img src="" alt=""></div>
+          <div class="row-header__logo-c d-flex flex-row">
+            <img class="row-header__img" src="img/herb-bydgoszcz.png" alt="Herb Bydgoszcz">
+            <img class="row-header__img" src="img/zarzad_drog.png" alt="Zarzad Dróg">
+            <h1 class="header-bydgoszcz d-flex justify-content-between align-items-start flex-column"><span class="header-bydgoszcz__top">zarząd
+                dróg miejskich i komunikacji publicznej</span><span class="header-bydgoszcz__bottom">w Bygoszczy</span></h1>
+          </div>
         </div>
         <div class="col">
-          <div class="row">
-            <div class="row-header__fonts-c d-flex">
-              <div class="row-header__letter row-header__letter--small">a</div>
-              <div class="row-header__letter">a</div>
-              <div class="row-header__letter row-header__letter--large">a</div>
+          <div class="row h-100 align-items-end justify-content-end">
+            <div class="row-header__fonts-c d-flex align-items-end">
+              <div class="letter letter--small d-flex align-items-end"><button class="letter-btn" id="letterSmall">a</button></div>
+              <div class="letter d-flex align-items-end"><button class="letter-btn" id="letterNormal">a</button></div>
+              <div class="letter letter--large d-flex align-items-end"><button class="letter-btn" id="letterLarge">a</button></div>
             </div>
             <div class="row-header__contrast-c d-flex">
-              <div class="row-header__contrast-left">Kontrast</div>
-              <div class="row-header__contrast-right"></div>
+              <button class="btn-contrast toggle-contrast flex-row d-flex">
+                <div class="contrast-left">Kontrast</div>
+                <div class="contrast-right">&nbsp;</div>
+              </button>
             </div>
             <div class="row-header__search-c d-flex">
               <div class="input-group">
-                <input class="form-control py-2 border-right-0 border" type="search" value="Szukaj" id="headerSearch">
+                <input class="form-control py-2 border-right-0" type="search" value="Szukaj..." id="headerSearch">
                 <span class="input-group-append">
                   <div class="input-group-text bg-transparent"><i class="fa fa-search"></i></div>
                 </span>
@@ -499,118 +506,112 @@
                 <a href="#" class="tabs__item active">Planowane</a>
                 <a href="#" class="tabs__item">W realizacji</a>
               </div>
-                <div class="investitions-content investitions-content--planned">
-                  <ul class="investitions-content__list">
-                    <li class="investitions-content__item">
-                      <div class="investitions-content__wrap">
-                        <div class="investitions-content__paragraph">Lorem ipsum dolor sit amet</div><span
-                          class="investitions-content__meta">11.11.2011</span>
-                      </div>
-                    </li>
-                    <li class="investitions-content__item">
-                      <div class="investitions-content__wrap">
-                        <div class="investitions-content__paragraph">Lorem ipsum dolor sit amet</div><span
-                          class="investitions-content__meta">11.11.2011</span>
-                      </div>
-                    </li>
-                    <li class="investitions-content__item">
-                      <div class="investitions-content__wrap">
-                        <div class="investitions-content__paragraph">Lorem ipsum dolor sit amet</div><span
-                          class="investitions-content__meta">11.11.2011</span>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div class="investitions-content investitions-content--in-progress">
-                    <ul class="investitions-content__list">
-                      <li class="investitions-content__item">
-                        <div class="investitions-content__wrap">
-                          <div class="investitions-content__paragraph">Lorem ipsum dolor sit amet</div><span
-                            class="investitions-content__meta">11.11.2011</span>
-                        </div>
-                      </li>
-                      <li class="investitions-content__item">
-                        <div class="investitions-content__wrap">
-                          <div class="investitions-content__paragraph">Lorem ipsum dolor sit amet</div><span
-                            class="investitions-content__meta">11.11.2011</span>
-                        </div>
-                      </li>
-                      <li class="investitions-content__item">
-                        <div class="investitions-content__wrap">
-                          <div class="investitions-content__paragraph">Lorem ipsum dolor sit amet</div><span
-                            class="investitions-content__meta">11.11.2011</span>
-                        </div>
-                      </li>
-                    </ul>
-                </div>
+              <div class="investitions-content investitions-content--planned">
+                <ul class="investitions-content__list">
+                  <li class="investitions-content__item">
+                    <div class="investitions-content__wrap">
+                      <div class="investitions-content__paragraph">Lorem ipsum dolor sit amet</div><span class="investitions-content__meta">11.11.2011</span>
+                    </div>
+                  </li>
+                  <li class="investitions-content__item">
+                    <div class="investitions-content__wrap">
+                      <div class="investitions-content__paragraph">Lorem ipsum dolor sit amet</div><span class="investitions-content__meta">11.11.2011</span>
+                    </div>
+                  </li>
+                  <li class="investitions-content__item">
+                    <div class="investitions-content__wrap">
+                      <div class="investitions-content__paragraph">Lorem ipsum dolor sit amet</div><span class="investitions-content__meta">11.11.2011</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="investitions-content investitions-content--in-progress">
+                <ul class="investitions-content__list">
+                  <li class="investitions-content__item">
+                    <div class="investitions-content__wrap">
+                      <div class="investitions-content__paragraph">Lorem ipsum dolor sit amet</div><span class="investitions-content__meta">11.11.2011</span>
+                    </div>
+                  </li>
+                  <li class="investitions-content__item">
+                    <div class="investitions-content__wrap">
+                      <div class="investitions-content__paragraph">Lorem ipsum dolor sit amet</div><span class="investitions-content__meta">11.11.2011</span>
+                    </div>
+                  </li>
+                  <li class="investitions-content__item">
+                    <div class="investitions-content__wrap">
+                      <div class="investitions-content__paragraph">Lorem ipsum dolor sit amet</div><span class="investitions-content__meta">11.11.2011</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="col-12">
-                <h3 class="section-header">Aktualności komunikacyjne</h3>
-                <div id="carousel4Indicators" class="carousel slide carousel-communication" data-ride="carousel">
-                  <ol class="carousel-indicators">
-                    <li data-target="#carousel4Indicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel4Indicators" data-slide-to="1"></li>
-                    <li data-target="#carousel4Indicators" data-slide-to="2"></li>
-                  </ol>
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <div class="carousel-content">
-                        <ul class="carousel-content__list">
-                          <li class="carousel-content__item">
-                            <div class="carousel-content__wrap">
-                              <div class="carousel-content__paragraph">Wyniesione skrzyżowanie i progi zwalniające</div><span
-                                class="carousel-content__meta">11.11.2011</span>
-                            </div>
-                          </li>
-                          <li class="carousel-content__item">
-                            <div class="carousel-content__wrap">
-                              <div class="carousel-content__paragraph">Wyniesione skrzyżowanie i progi zwalniające</div><span
-                                class="carousel-content__meta">11.11.2011</span>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
+              <h3 class="section-header">Aktualności komunikacyjne</h3>
+              <div id="carousel4Indicators" class="carousel slide carousel-communication" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carousel4Indicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel4Indicators" data-slide-to="1"></li>
+                  <li data-target="#carousel4Indicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="carousel-content">
+                      <ul class="carousel-content__list">
+                        <li class="carousel-content__item">
+                          <div class="carousel-content__wrap">
+                            <div class="carousel-content__paragraph">Wyniesione skrzyżowanie i progi zwalniające</div><span
+                              class="carousel-content__meta">11.11.2011</span>
+                          </div>
+                        </li>
+                        <li class="carousel-content__item">
+                          <div class="carousel-content__wrap">
+                            <div class="carousel-content__paragraph">Wyniesione skrzyżowanie i progi zwalniające</div><span
+                              class="carousel-content__meta">11.11.2011</span>
+                          </div>
+                        </li>
+                      </ul>
                     </div>
-                    <div class="carousel-item">
-                      <div class="carousel-content">
-                        <ul class="carousel-content__list">
-                          <li class="carousel-content__item">
-                            <div class="carousel-content__wrap">
-                              <div class="carousel-content__paragraph">Wyniesione skrzyżowanie i progi zwalniające</div><span
-                                class="carousel-content__meta">11.11.2011</span>
-                            </div>
-                          </li>
-                          <li class="carousel-content__item">
-                            <div class="carousel-content__wrap">
-                              <div class="carousel-content__paragraph">Wyniesione skrzyżowanie i progi zwalniające</div><span
-                                class="carousel-content__meta">11.11.2011</span>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-content">
+                      <ul class="carousel-content__list">
+                        <li class="carousel-content__item">
+                          <div class="carousel-content__wrap">
+                            <div class="carousel-content__paragraph">Wyniesione skrzyżowanie i progi zwalniające</div><span
+                              class="carousel-content__meta">11.11.2011</span>
+                          </div>
+                        </li>
+                        <li class="carousel-content__item">
+                          <div class="carousel-content__wrap">
+                            <div class="carousel-content__paragraph">Wyniesione skrzyżowanie i progi zwalniające</div><span
+                              class="carousel-content__meta">11.11.2011</span>
+                          </div>
+                        </li>
+                      </ul>
                     </div>
-                    <div class="carousel-item">
-                      <div class="carousel-content">
-                        <ul class="carousel-content__list">
-                          <li class="carousel-content__item">
-                            <div class="carousel-content__wrap">
-                              <div class="carousel-content__paragraph">Wyniesione skrzyżowanie i progi zwalniające</div><span
-                                class="carousel-content__meta">11.11.2011</span>
-                            </div>
-                          </li>
-                          <li class="carousel-content__item">
-                            <div class="carousel-content__wrap">
-                              <div class="carousel-content__paragraph">Wyniesione skrzyżowanie i progi zwalniające</div><span
-                                class="carousel-content__meta">11.11.2011</span>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-content">
+                      <ul class="carousel-content__list">
+                        <li class="carousel-content__item">
+                          <div class="carousel-content__wrap">
+                            <div class="carousel-content__paragraph">Wyniesione skrzyżowanie i progi zwalniające</div><span
+                              class="carousel-content__meta">11.11.2011</span>
+                          </div>
+                        </li>
+                        <li class="carousel-content__item">
+                          <div class="carousel-content__wrap">
+                            <div class="carousel-content__paragraph">Wyniesione skrzyżowanie i progi zwalniające</div><span
+                              class="carousel-content__meta">11.11.2011</span>
+                          </div>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-                <a href="#" class="content-btn content-btn--corner content-btn--color1">wszystkie</a>
               </div>
+              <a href="#" class="content-btn content-btn--corner content-btn--color1">wszystkie</a>
+            </div>
           </div>
         </div>
       </div>
@@ -659,7 +660,6 @@
 
   <!-- jQuery first, then Bootstrap JS. -->
   <script src="js/jquery-3.3.1.min.js"></script>
-  <!-- <script src="js/jquery.min.js"></script> -->
   <script src="js/bootstrap.min.js"></script>
   <script src="js/script.js"></script>
 </body>

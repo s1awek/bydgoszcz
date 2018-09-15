@@ -1,7 +1,202 @@
-body {
-    color: red;
+//Vars
+$color-1: #3f48cc;
+$color-2: #b5e61d;
+$color-3: #fcff01;
+$light-grey: #afb2b6;
+$very-light-grey: #e5e7f8;
+$dark-grey: #3b3b3b;
+$zarzad-drog: #fe961f;
+
+//Helper classes
+.bg-color-1 {
+    background-color: $color-1;
 }
 
-button {
-    color: red!important;
+.bg-color-2 {
+    background-color: $color-2;
+}
+
+.bg-color-3 {
+    background-color: $color-3;
+}
+
+.text-color-very-light {
+    color: #fff;
+}
+
+.text-color-light {
+    $very-light-grey: #e5e7f8;
+}
+
+//Main
+html {
+    font-size: 16px;
+    color: $dark-grey;
+
+    & * {
+        font-family: Raleway, sans-serif;
+    }
+}
+
+.container-main,
+.navbar-top {
+    max-width: 1200px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+//Navbar
+.navbar-toggler-icon {
+    color: $very-light-grey;
+    font-size: 1.3rem;
+}
+
+.navbar-toggler {
+    border-color: $very-light-grey;
+    position: relative;
+    left: calc(50% - 30px);
+}
+
+.navbar-nav {
+    .nav-link {
+        color: $very-light-grey;
+        font-size: 1rem;
+    }
+}
+
+.dropdown-toggle::after {
+    content: '\f078';
+    font-family: 'FontAwesome';
+    font-size: 0.6rem;
+    border: none;
+    margin: 0;
+    vertical-align: 0;
+    position: absolute;
+    top: 0.8rem;
+    right: 0;
+}
+
+//Header
+.row-header {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 0;
+    &__logo-c {
+        .header-bydgoszcz {
+            margin: 0;
+            &__top {
+                font-weight: 600;
+                text-transform: uppercase;
+                font-size: 1rem;
+                display: block;
+                margin-top: 4px;
+                //line-height: 1.3em;
+            }
+
+            &__bottom {
+                color: $zarzad-drog;
+                font-size: 1rem;
+                //line-height: 1.3em;
+                display: inline-block;
+                margin-bottom: 4px;
+                font-weight: 600;
+            }
+        }
+    }
+    &__img {
+        align-self: center;
+        margin-right: 30px;
+    }
+    &__fonts-c {
+        & * {
+            font-family: Montserrat, sans-serif;
+        }
+        margin-right: 30px;
+        .letter {
+            margin-right: 5px;
+            .letter-btn {
+                border: none;
+                background-color: transparent;
+                text-transform: uppercase;
+                line-height: 0.8em;
+                font-weight: bold;
+                padding: 0;
+                cursor: pointer;
+                font-size: 1.3rem;
+            }
+            &--small {
+                .letter-btn {
+                    font-size: 0.9rem;
+                }
+                
+            }
+            &--large {
+                .letter-btn {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+    &__contrast-c  {
+        .btn-contrast {
+            border: none;
+            background-color: transparent;
+            padding: 0;
+            cursor: pointer;
+            margin-right: 30px;
+            .contrast-left {
+                border: 2px solid #000;
+                border-top-left-radius: 5000px;
+                border-bottom-left-radius: 5000px;
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-top: 2px;
+                font-weight: 800;
+            }
+            .contrast-right {
+                border: 2px solid #000;
+                border-top-right-radius: 5000px;
+                border-bottom-right-radius: 5000px;
+                padding-right: 10px;
+                padding-top: 2px;
+                font-weight: 800;
+                background-color: #000;
+            }
+        }
+    }
+    &__search-c {
+        .input-group {
+            .form-control {
+                border: none;
+                border-bottom: 1px solid $light-grey;
+                border-radius: 0;
+                color: $light-grey;
+                font-weight: bold;
+                padding-left: 0;
+            }
+            .input-group-text {
+                border: none;
+                border-bottom: 1px solid $light-grey;
+                border-radius: 0;
+                color: $light-grey;
+            }
+        }
+    }
+}
+//Top bar
+.top-bar{
+    &__outer-c {
+        background-image: linear-gradient(45deg, $color-3 25%, #000000 25%, #000000 50%, $color-3 50%, $color-3 75%, #000000 75%, #000000 100%);
+        background-size: 56px 56px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 6px;
+    }
+    &__inner-c {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin: 0;
+        background-color: $color-3;
+        border-radius: 6px;
+    }
 }

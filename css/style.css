@@ -1,2 +1,138 @@
-body{color:red}button{color:red!important}
-/*# sourceMappingURL=../maps/style.css.map */
+.bg-color-1 {
+  background-color: #3f48cc; }
+
+.bg-color-2 {
+  background-color: #b5e61d; }
+
+.bg-color-3 {
+  background-color: #fcff01; }
+
+.text-color-very-light {
+  color: #fff; }
+
+html {
+  font-size: 16px;
+  color: #3b3b3b; }
+  html * {
+    font-family: Raleway, sans-serif; }
+
+.container-main,
+.navbar-top {
+  max-width: 1200px;
+  padding-left: 25px;
+  padding-right: 25px; }
+
+.navbar-toggler-icon {
+  color: #e5e7f8;
+  font-size: 1.3rem; }
+
+.navbar-toggler {
+  border-color: #e5e7f8;
+  position: relative;
+  left: calc(50% - 30px); }
+
+.navbar-nav .nav-link {
+  color: #e5e7f8;
+  font-size: 1rem; }
+
+.dropdown-toggle::after {
+  content: '\f078';
+  font-family: 'FontAwesome';
+  font-size: 0.6rem;
+  border: none;
+  margin: 0;
+  vertical-align: 0;
+  position: absolute;
+  top: 0.8rem;
+  right: 0; }
+
+.row-header {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-right: 0; }
+  .row-header__logo-c .header-bydgoszcz {
+    margin: 0; }
+    .row-header__logo-c .header-bydgoszcz__top {
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 1rem;
+      display: block;
+      margin-top: 4px; }
+    .row-header__logo-c .header-bydgoszcz__bottom {
+      color: #fe961f;
+      font-size: 1rem;
+      display: inline-block;
+      margin-bottom: 4px;
+      font-weight: 600; }
+  .row-header__img {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    margin-right: 30px; }
+  .row-header__fonts-c {
+    margin-right: 30px; }
+    .row-header__fonts-c * {
+      font-family: Montserrat, sans-serif; }
+    .row-header__fonts-c .letter {
+      margin-right: 5px; }
+      .row-header__fonts-c .letter .letter-btn {
+        border: none;
+        background-color: transparent;
+        text-transform: uppercase;
+        line-height: 0.8em;
+        font-weight: bold;
+        padding: 0;
+        cursor: pointer;
+        font-size: 1.3rem; }
+      .row-header__fonts-c .letter--small .letter-btn {
+        font-size: 0.9rem; }
+      .row-header__fonts-c .letter--large .letter-btn {
+        font-size: 1.6rem; }
+  .row-header__contrast-c .btn-contrast {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+    margin-right: 30px; }
+    .row-header__contrast-c .btn-contrast .contrast-left {
+      border: 2px solid #000;
+      border-top-left-radius: 5000px;
+      border-bottom-left-radius: 5000px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 2px;
+      font-weight: 800; }
+    .row-header__contrast-c .btn-contrast .contrast-right {
+      border: 2px solid #000;
+      border-top-right-radius: 5000px;
+      border-bottom-right-radius: 5000px;
+      padding-right: 10px;
+      padding-top: 2px;
+      font-weight: 800;
+      background-color: #000; }
+  .row-header__search-c .input-group .form-control {
+    border: none;
+    border-bottom: 1px solid #afb2b6;
+    border-radius: 0;
+    color: #afb2b6;
+    font-weight: bold;
+    padding-left: 0; }
+  .row-header__search-c .input-group .input-group-text {
+    border: none;
+    border-bottom: 1px solid #afb2b6;
+    border-radius: 0;
+    color: #afb2b6; }
+
+.top-bar__outer-c {
+  background-image: linear-gradient(45deg, #fcff01 25%, #000000 25%, #000000 50%, #fcff01 50%, #fcff01 75%, #000000 75%, #000000 100%);
+  background-size: 56px 56px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 6px; }
+
+.top-bar__inner-c {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 0;
+  background-color: #fcff01;
+  border-radius: 6px; }
