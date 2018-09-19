@@ -541,6 +541,17 @@ html {
            text-decoration: none;
        }
    } 
+   &.timetable-wrap {
+       position: relative;
+    &:after {
+    content: '\f054';
+    font-family: FontAwesome;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    font-size: 1rem;
+    }
+   }
 }
 
 .col-timetable {
@@ -548,14 +559,30 @@ html {
     .inner-wrap {
         padding-right: 100px;
         padding-bottom: 30px;
+        padding-right: 100px;
+        padding-bottom: 30px;
+        background-image: url(../img/ico-signpost.png);
+        background-repeat: no-repeat;
+        background-position-x: calc(100% - 20px);
+        background-position-y: center;  
+        @media screen and (max-width: 992px) {
+            padding: 15px;
+            background-image: none;
+        } 
     }
-    
+    @media screen and (max-width: 992px) {
+        margin-top: 0;
+    }
 }
 
 .col-renovation {
     .inner-wrap {
         padding-right: 100px;
         padding-bottom: 30px;
+        background-image: url(../img/ico-flag-post.png);
+        background-repeat: no-repeat;
+        background-position-x: calc(100% + 10px);
+        background-position-y: center;
     } 
 }
 
@@ -566,7 +593,26 @@ html {
     margin-top: 30px;
     box-shadow: $box-shadow;
     position: relative;
-
+    &.how-to {
+        padding-bottom: 30px;
+        background-image: url(../img/ico-ok.png);
+        background-repeat: no-repeat;
+        background-position-x: calc(100% + 5px);
+        background-position-y: 28px;
+        
+    }
+    &.bicycle-around {
+        background-image: url(../img/ico-bicycle.png);
+        background-repeat: no-repeat;
+        background-position-x: calc(100% + 20px);
+        background-position-y: 28px;
+    }
+    &.last {
+        background-image: url(../img/ico-helmet.png);
+        background-repeat: no-repeat;
+        background-position-x: calc(100% + 15px);
+        background-position-y: 28px;
+    }
     &.bg-color-1 {
         .section-header {
             color: $very-light-grey;
@@ -659,6 +705,10 @@ html {
     margin-bottom: 30px;
     .inner-wrap {
         padding-bottom: 30px;
+        background-image: url(../img/ico-train.png);
+        background-repeat: no-repeat;
+        background-position-x: calc(100% - 30px);
+        background-position-y: center;        
     }
     &__link {
         color: $dark-grey;
@@ -676,9 +726,19 @@ html {
     }
     .col-ps {
         padding-right: 50px;
+        padding-bottom: 30px;
+        background-image: url(../img/quill.png);
+        background-repeat: no-repeat;
+        background-position-x: calc(100% - 30px);
+        background-position-y: 15px; 
     }
     .col-bl {
         padding-left: 50px;
+        padding-bottom: 30px;
+        background-image: url(../img/logo-flag.png);
+        background-repeat: no-repeat;
+        background-position-x: calc(100% - 50px);
+        background-position-y: 25px; 
     }
 }
 
@@ -756,9 +816,25 @@ html {
     }
 }
 
+.public-transportation {
+    @media screen and (max-width: 992px){
+        margin-top: 0;
+    }
+    &__wrap {
+        background-image: url(../img/ico-car.png);
+        background-repeat: no-repeat;
+        background-position-x: calc(100% + 45px);
+        background-position-y: 20px;
+    }
+}
+
 .tickets {
     &__wrap {
         padding-bottom: 10px;
+        background-image: url(../img/ico-ticket.png);
+        background-repeat: no-repeat;
+        background-position-x: calc(100% + 5px);
+        background-position-y: 20px;
         .section-header {
             padding-right: 45px;
         }
@@ -784,7 +860,7 @@ html {
             color: $dark-grey;
             text-decoration: none;
         }
-        &:after{
+        &:after {
             content:'\f054';
             font-family: FontAwesome;
             position: absolute;
@@ -792,6 +868,9 @@ html {
             right: 0;
             font-size: 1rem;
         }
+    }
+    @media screen and (max-width: 992px) {
+        margin-top: 0;
     }
 }
 
@@ -803,6 +882,10 @@ html {
         padding: 30px;
         padding-bottom: 55px;
         position: relative;
+        background-image: url(../img/ico-arrows.png);
+        background-repeat: no-repeat;
+        background-position-x: calc(100% + 5px);
+        background-position-y: 20px;
         .investitions-content {
             position: relative;
             &--in-progress {
@@ -859,8 +942,47 @@ html {
             }
         }
     }
+    @media screen and (max-width: 992px) {
+        margin-bottom: 30px;
+    }
 }
 
 .public-orders {
     margin-top: 30px;
+    @media screen and (max-width: 992px) {
+        margin-top: 0;
+    }
+    .inner-wrap {
+        background-image: url(../img/ico-person.png);
+        background-repeat: no-repeat;
+        background-position-x: calc(100% + 30px);
+        background-position-y: 20px;
+        @media screen and (max-width: 992px) {
+            padding-bottom: 75px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.news-wrap {
+    .inner-wrap {
+        background-image: url(../img/ico-junction.png);
+        background-repeat: no-repeat;
+        background-position-x: calc(100% + 25px);
+        background-position-y: 30px;
+    }
+}
+
+.col-news {
+    .inner-wrap {
+        background-image: url(../img/ico-globe.png);
+        background-repeat: no-repeat;
+        background-position-x: calc(100% + 45px);
+        background-position-y: 20px;
+    }
+    .carousel-content__item:last-child {
+        @media screen and (max-width: 992px) {
+            display: none;
+        }
+    }
 }
