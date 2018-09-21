@@ -25,12 +25,22 @@ $(document).ready(function(){
         }
     });
     $('.letter-btn').click(function(){
-        $('html').attr('class', '');
+        if(!$('html').hasClass('high-contrast')) {
+            $('html').attr('class', '');
+        } else {
+            $('html').attr('class', '');
+            $('html').addClass('high-contrast');
+        }
+        
         if($(this).attr('id') === 'letterLarge') {
             $('html').addClass('letter-large');
         }
         if($(this).attr('id') === 'letterXLarge') {
             $('html').addClass('letter-x-large');
         }
+    });
+
+    $('.btn-contrast').click(function(){
+        $('html').toggleClass('high-contrast');
     });
 });
