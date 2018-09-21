@@ -40,6 +40,12 @@ html {
     & * {
         font-family: Raleway, sans-serif;
     }
+    &.letter-large {
+        font-size: 19px;
+    }
+    &.letter-x-large {
+        font-size: 23px;
+    }
 }
 .section-header {
     font-family: Raleway, sans-serif;
@@ -149,6 +155,9 @@ html {
         @media screen and (max-width: 992px) {
             white-space: nowrap;
         }
+        @media screen and (max-width: 576px) {
+            white-space: initial;
+        }
     }
 }
 
@@ -156,6 +165,11 @@ html {
     width: 100%;
     height: 1px;
     background-color: $light-grey;
+    &--bottom {
+        @media screen and (max-width: 576px) {
+            margin-top: 25px;
+        }
+    }
 }
 
 //Caurosel
@@ -548,6 +562,17 @@ html {
     }
 }
 
+.row-sidebar {
+    @media screen and (min-width: 992px) and (max-width: 1120px) {
+        .carousel-indicators {
+            li {
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
 .row-hero-carousel {
     .col-hero-caurosel {
         min-height: 425px;
@@ -612,6 +637,9 @@ html {
                 padding-left: 20px;
                 padding-right: 20px;
                 padding-bottom: 0;
+                @media screen and (max-width: 767px) {
+                    position: static;
+                }
             }
 
             .slider-meta-ico {
@@ -705,6 +733,9 @@ html {
     margin-top: 30px;
     box-shadow: $box-shadow;
     position: relative;
+    @media screen and (max-width: 576px) {
+        padding-right: 50px;
+    }
     &.how-to {
         padding-bottom: 30px;
         background-image: url(../img/ico-ok.png);
@@ -724,6 +755,9 @@ html {
         background-repeat: no-repeat;
         background-position-x: calc(100% + 15px);
         background-position-y: 28px;
+        @media screen and (max-width: 576px) {
+            padding-bottom: 55px;
+        }
     }
     &.bg-color-1 {
         .section-header {

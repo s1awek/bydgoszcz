@@ -15,6 +15,10 @@ html {
   color: #3b3b3b; }
   html * {
     font-family: Raleway, sans-serif; }
+  html.letter-large {
+    font-size: 19px; }
+  html.letter-x-large {
+    font-size: 23px; }
 
 .section-header {
   font-family: Raleway, sans-serif;
@@ -105,10 +109,17 @@ html {
   .col-sidebar .section-header {
     white-space: nowrap; } }
 
+@media screen and (max-width: 576px) {
+  .col-sidebar .section-header {
+    white-space: initial; } }
+
 .divider {
   width: 100%;
   height: 1px;
   background-color: #afb2b6; }
+  @media screen and (max-width: 576px) {
+    .divider--bottom {
+      margin-top: 25px; } }
 
 .carousel .carousel-content:after {
   content: '';
@@ -415,6 +426,11 @@ html {
       margin-bottom: 3px;
       margin-right: 50px; } }
 
+@media screen and (min-width: 992px) and (max-width: 1120px) {
+  .row-sidebar .carousel-indicators li {
+    margin-left: 5px;
+    margin-right: 5px; } }
+
 .row-hero-carousel .col-hero-caurosel {
   min-height: 425px; }
   .row-hero-carousel .col-hero-caurosel .caurosel {
@@ -465,6 +481,9 @@ html {
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 0; }
+    @media screen and (max-width: 767px) {
+      .row-hero-carousel .col-hero-caurosel .carousel-item .carousel-caption {
+        position: static; } }
   .row-hero-carousel .col-hero-caurosel .carousel-item .slider-meta-ico {
     margin-right: 15px;
     color: #3b3b3b;
@@ -536,6 +555,9 @@ html {
   margin-top: 30px;
   box-shadow: -5px 12px 24.03px 11px rgba(84, 17, 40, 0.27);
   position: relative; }
+  @media screen and (max-width: 576px) {
+    .full-row-wrap {
+      padding-right: 50px; } }
   .full-row-wrap.how-to {
     padding-bottom: 30px;
     background-image: url(../img/ico-ok.png);
@@ -552,6 +574,9 @@ html {
     background-repeat: no-repeat;
     background-position-x: calc(100% + 15px);
     background-position-y: 28px; }
+    @media screen and (max-width: 576px) {
+      .full-row-wrap.last {
+        padding-bottom: 55px; } }
   .full-row-wrap.bg-color-1 .section-header {
     color: #e5e7f8; }
   .full-row-wrap.bg-color-1 .column-header {

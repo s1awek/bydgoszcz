@@ -24,4 +24,13 @@ $(document).ready(function(){
             $('.investitions-content').css('display','');
         }
     });
+    $('.letter-btn').click(function(){
+        $('html').attr('class', '');
+        if($(this).attr('id') === 'letterLarge') {
+            $('html').addClass('letter-large');
+        }
+        if($(this).attr('id') === 'letterXLarge') {
+            $('html').addClass('letter-x-large');
+        }
+    });
 });
