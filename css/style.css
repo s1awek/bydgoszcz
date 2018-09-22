@@ -41,7 +41,7 @@ html {
     html.high-contrast * .carousel-inner:after {
       background-image: linear-gradient(transparent, #000, #000) !important; }
     html.high-contrast * .investitions-content:after {
-      background-image: linear-gradient(transparent, #000, #000); }
+      background-image: linear-gradient(to right, transparent, #000); }
     html.high-contrast * .col-last-content, html.high-contrast * .section-header {
       background-color: transparent !important; }
   html .carousel-indicators li.active {
