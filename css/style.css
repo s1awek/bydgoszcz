@@ -19,6 +19,33 @@ html {
     font-size: 19px; }
   html.letter-x-large {
     font-size: 23px; }
+  html.high-contrast * {
+    color: #fcff01 !important;
+    background-color: #000 !important;
+    border-color: #fcff01 !important;
+    box-shadow: none !important; }
+    html.high-contrast * .inner-wrap,
+    html.high-contrast * .write__wrap,
+    html.high-contrast * .tickets__wrap,
+    html.high-contrast * .public-transportation__wrap,
+    html.high-contrast * .top-bar__outer-c,
+    html.high-contrast * .investitions__wrap,
+    html.high-contrast * .full-row-wrap,
+    html.high-contrast * .category-box,
+    html.high-contrast * .content-btn {
+      border: 1px solid #fcff01; }
+    html.high-contrast * .col-hero-caurosel .carousel-inner {
+      border: 1px solid #fcff01; }
+    html.high-contrast * .carousel-content:after {
+      background-image: linear-gradient(to right, transparent, #000); }
+    html.high-contrast * .carousel-inner:after {
+      background-image: linear-gradient(transparent, #000, #000) !important; }
+    html.high-contrast * .investitions-content:after {
+      background-image: linear-gradient(transparent, #000, #000); }
+    html.high-contrast * .col-last-content, html.high-contrast * .section-header {
+      background-color: transparent !important; }
+  html .carousel-indicators li.active {
+    background-color: #fcff01 !important; }
 
 .section-header {
   font-family: Raleway, sans-serif;
@@ -26,7 +53,8 @@ html {
   font-size: 1.55rem;
   line-height: 2.4rem;
   text-align: left;
-  color: #3b3b3b; }
+  color: #3b3b3b;
+  overflow-wrap: break-word; }
   @media screen and (max-width: 1200px) {
     .section-header {
       font-size: 1.2rem; } }
@@ -593,12 +621,14 @@ html {
     padding-left: 20px;
     padding-right: 35px; }
     .full-row-wrap div[class*='col']:first-child {
-      padding-left: 30px; }
-  .full-row-wrap .full-row__meta {
-    font-family: Helvetica, Arial, sans-serif;
-    color: #afb2b6;
-    font-size: 0.8rem;
-    margin-bottom: 5px; }
+      padding-left: 15px; }
+  .full-row-wrap .full-row {
+    margin-left: 0; }
+    .full-row-wrap .full-row__meta {
+      font-family: Helvetica, Arial, sans-serif;
+      color: #afb2b6;
+      font-size: 0.8rem;
+      margin-bottom: 5px; }
   .full-row-wrap.last {
     margin-bottom: 30px; }
 
@@ -672,6 +702,9 @@ html {
   background-position-x: calc(100% - 50px);
   background-position-y: 25px; }
 
+.row-last-content .section-header {
+  display: inline-block; }
+
 .row-logos {
   height: 150px; }
   .row-logos .partner-logo {
@@ -722,32 +755,38 @@ html {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 0.85rem; }
 
-.public-transportation, .tickets {
+.public-transportation,
+.tickets {
   margin-top: 30px; }
-  .public-transportation__wrap, .tickets__wrap {
+  .public-transportation__wrap,
+  .tickets__wrap {
     border-radius: 6px;
     padding: 30px;
     padding-top: 15px;
     padding-bottom: 55px;
     box-shadow: -5px 12px 24.03px 11px rgba(84, 17, 40, 0.27);
     position: relative; }
-    .public-transportation__wrap .section-header, .tickets__wrap .section-header {
+    .public-transportation__wrap .section-header,
+    .tickets__wrap .section-header {
       margin-bottom: 30px; }
-  .public-transportation__link, .tickets__link {
+  .public-transportation__link,
+  .tickets__link {
     display: block;
     color: #e5e7f8;
     margin-bottom: 20px;
     position: relative;
     padding-right: 30px;
     font-size: 1.1rem; }
-    .public-transportation__link:after, .tickets__link:after {
+    .public-transportation__link:after,
+    .tickets__link:after {
       content: '\f054';
       font-family: FontAwesome;
       position: absolute;
       top: 2px;
       right: 0;
       font-size: 1rem; }
-    .public-transportation__link:hover, .tickets__link:hover {
+    .public-transportation__link:hover,
+    .tickets__link:hover {
       color: #e5e7f8;
       text-decoration: none; }
 
