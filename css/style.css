@@ -42,7 +42,8 @@ html {
       background-image: linear-gradient(transparent, #000, #000) !important; }
     html.high-contrast * .investitions-content:after {
       background-image: linear-gradient(to right, transparent, #000); }
-    html.high-contrast * .col-last-content, html.high-contrast * .section-header {
+    html.high-contrast * .col-last-content,
+    html.high-contrast * .section-header {
       background-color: transparent !important; }
     html.high-contrast * .carousel-indicators li.active {
       background-color: #fcff01 !important; }
@@ -785,7 +786,7 @@ html {
     .public-transportation__link:after,
     .tickets__link:after {
       content: '\f054';
-      font-family: "Font Awesome 5 Free" !important;
+      font-family: 'Font Awesome 5 Free';
       position: absolute;
       top: 2px;
       right: 0;
@@ -969,3 +970,56 @@ html {
 @media screen and (max-width: 767px) {
   .col-news {
     margin-bottom: 30px; } }
+
+.row-main-content--list .nav-item--submenu > .nav-link {
+  font-weight: 900;
+  position: relative; }
+  .row-main-content--list .nav-item--submenu > .nav-link .ico-dropdown {
+    position: absolute;
+    left: -11px;
+    top: 11px;
+    transition: all 0.25s ease-in-out;
+    transform: rotate(180deg); }
+  .row-main-content--list .nav-item--submenu > .nav-link.collapsed .ico-dropdown {
+    transform: rotate(0); }
+
+.row-main-content--list .nav-link {
+  color: #3b3b3b;
+  font-weight: 600; }
+
+.row-main-content--list .col-aside .inner-wrap {
+  background-image: url(../img/ico-arrows.png);
+  background-repeat: no-repeat;
+  background-position-x: calc(100% + 10px);
+  background-position-y: 30px; }
+
+@media screen and (max-width: 767px) {
+  .row-main-content--list .col-aside {
+    margin-bottom: 30px; } }
+
+.row-main-content--list .section-header {
+  line-height: 1.5em; }
+  .row-main-content--list .section-header__link {
+    color: #3b3b3b; }
+    .row-main-content--list .section-header__link:hover {
+      text-decoration: none; }
+
+.row-main-content--list .col-main .inner-wrap {
+  padding: 0; }
+  .row-main-content--list .col-main .inner-wrap--top-container {
+    height: 200px;
+    background: url(../img/example-image.jpg) center center no-repeat;
+    background-size: cover; }
+  .row-main-content--list .col-main .inner-wrap--bottom-container {
+    padding: 30px; }
+
+.row-main-content--list .col-main .section-header {
+  margin-bottom: 0; }
+
+.row-main-content--list .row-inner {
+  margin-bottom: 30px; }
+  .row-main-content--list .row-inner:last-child {
+    margin-bottom: 90px; }
+  @media screen and (max-width: 992px) {
+    .row-main-content--list .row-inner .col-inner {
+      margin-bottom: 30px; } }

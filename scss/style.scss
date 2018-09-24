@@ -64,7 +64,7 @@ html {
         .top-bar__outer-c,
         .investitions__wrap,
         .full-row-wrap,
-        .category-box, 
+        .category-box,
         .content-btn {
             border: $contrast-border;
         }
@@ -90,13 +90,16 @@ html {
                 background-image: linear-gradient(to right, transparent, #000);
             }
         }
-        .col-last-content, .section-header {
-            background-color: transparent!important;
+
+        .col-last-content,
+        .section-header {
+            background-color: transparent !important;
         }
+
         .carousel-indicators {
             li {
                 &.active {
-                    background-color: $color-3!important;
+                    background-color: $color-3 !important;
                 }
             }
         }
@@ -1052,6 +1055,7 @@ html {
         background-position-x: calc(100% - 50px);
         background-position-y: 25px;
     }
+
     .section-header {
         display: inline-block;
     }
@@ -1155,7 +1159,7 @@ html {
 
         &:after {
             content: '\f054';
-            font-family: 'Font Awesome 5 Free'!important;
+            font-family: 'Font Awesome 5 Free';
             position: absolute;
             top: 2px;
             right: 0;
@@ -1412,5 +1416,83 @@ html {
 
     @media screen and (max-width: 767px) {
         margin-bottom: 30px;
+    }
+}
+
+//List view
+.row-main-content {
+    &--list {
+        .nav-item {
+            &--submenu {
+                &>.nav-link {
+                    font-weight: 900;
+                    position: relative;
+                    .ico-dropdown {
+                        position: absolute;
+                        left: -11px;
+                        top: 11px;
+                        transition: $transition;
+                        transform: rotate(180deg);
+                    }
+                    &.collapsed {
+                        .ico-dropdown {
+                            transform: rotate(0);
+                        }
+                    }
+                }
+            }
+        }
+
+        .nav-link {
+            color: $dark-grey;
+            font-weight: 600;
+        }
+        .col-aside {
+            .inner-wrap {
+                background-image: url(../img/ico-arrows.png);
+                background-repeat: no-repeat;
+                background-position-x:  calc(100% + 10px);
+                background-position-y: 30px;
+            }
+            @media screen and (max-width: 767px) {
+                margin-bottom: 30px;
+            }
+        }
+        .section-header {
+            line-height: 1.5em;
+            &__link {
+                color: $dark-grey;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+        .col-main {
+            .inner-wrap {
+                padding: 0;
+                &--top-container {
+                    height: 200px; 
+                    background: url(../img/example-image.jpg) center center no-repeat;
+                    background-size: cover;
+                }
+                &--bottom-container {
+                    padding: 30px;
+                }
+            }
+            .section-header {
+                margin-bottom: 0;
+            }
+        }
+        .row-inner {
+            margin-bottom: 30px;
+            &:last-child {
+                margin-bottom: 90px;
+            }
+            .col-inner {
+                @media screen and (max-width: 992px) {
+                    margin-bottom: 30px;
+                }
+            }
+        }
     }
 }

@@ -1,3 +1,4 @@
+'use strict';
 $(document).ready(function(){
     $('.tabs__item').click(function(e){
         e.preventDefault();
@@ -43,4 +44,18 @@ $(document).ready(function(){
     $('.btn-contrast').click(function(){
         $('html').toggleClass('high-contrast');
     });
+
+    var rotation = 0;
+
+    $.fn.rotate = function(degrees) {
+        $(this).css({'-webkit-transform' : 'rotate('+ degrees +'deg)',
+                    '-moz-transform' : 'rotate('+ degrees +'deg)',
+                    '-ms-transform' : 'rotate('+ degrees +'deg)',
+                    'transform' : 'rotate('+ degrees +'deg)'});
+        return $(this);
+    };
+
+    // $('.nav-item--submenu .nav-link').click(function(){
+    //     $(this).find('.ico-dropdown').toggleClass('rotate');
+    // });
 });
