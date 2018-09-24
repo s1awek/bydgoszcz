@@ -5,6 +5,7 @@ $color-3: #fcff01;
 $light-grey: #afb2b6;
 $very-light-grey: #e5e7f8;
 $dark-grey: #3b3b3b;
+$very-dark-grey: #343434;
 $zarzad-drog: #fe961f;
 $paragraph-color: #676767;
 $box-shadow: -5px 12px 24.03px 11px rgba(84, 17, 40, 0.27);
@@ -1419,45 +1420,51 @@ html {
     }
 }
 
-//List view
-.row-main-content {
-    &--list {
-        .nav-item {
-            &--submenu {
-                &>.nav-link {
-                    font-weight: 900;
-                    position: relative;
-                    .ico-dropdown {
-                        position: absolute;
-                        left: -11px;
-                        top: 11px;
-                        transition: $transition;
-                        transform: rotate(180deg);
-                    }
-                    &.collapsed {
-                        .ico-dropdown {
-                            transform: rotate(0);
-                        }
-                    }
+//Left sidebar 
+.nav-item {
+    &--submenu {
+        &>.nav-link {
+            font-weight: 900;
+            position: relative;
+            .ico-dropdown {
+                position: absolute;
+                left: -11px;
+                top: 11px;
+                transition: $transition;
+                transform: rotate(180deg);
+            }
+            &.collapsed {
+                .ico-dropdown {
+                    transform: rotate(0);
                 }
             }
         }
+    }
+}
 
-        .nav-link {
-            color: $dark-grey;
-            font-weight: 600;
-        }
-        .col-aside {
-            .inner-wrap {
-                background-image: url(../img/ico-arrows.png);
-                background-repeat: no-repeat;
-                background-position-x:  calc(100% + 10px);
-                background-position-y: 30px;
-            }
-            @media screen and (max-width: 767px) {
-                margin-bottom: 30px;
-            }
-        }
+.nav-link {
+    color: $dark-grey;
+    font-weight: 600;
+    transition: $transition;
+    &:hover {
+        color: lighten($dark-grey, 10%);
+    }
+}
+.col-aside {
+    .inner-wrap {
+        background-image: url(../img/ico-arrows.png);
+        background-repeat: no-repeat;
+        background-position-x:  calc(100% + 10px);
+        background-position-y: 30px;
+    }
+    @media screen and (max-width: 767px) {
+        margin-bottom: 30px;
+    }
+}
+
+//List view
+.row-main-content {
+    &--list {
         .section-header {
             line-height: 1.5em;
             &__link {
@@ -1494,5 +1501,147 @@ html {
                 }
             }
         }
+    }
+}
+
+//Single view 
+.row-main-content {
+    &--single {
+        .col-single {
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+        .row-breadcrumbs {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .breadcrumbs {
+            list-style: none;
+            padding-left: 0;
+            &__elem {
+                display: inline-block;
+                &:last-child {
+                    .breadcrumbs__link {
+                        &:after {
+                            content: '';
+                        }
+                    }
+                }
+            }
+            &__link {
+                color: $very-dark-grey;
+                font-size: 0.85rem;
+                position: relative;
+                margin-right: 50px;
+                font-weight: 600;
+                &:hover {
+                    text-decoration: none;
+                }
+                &:after {
+                    content: "\f054";
+                    font-family: "Font Awesome 5 Free";
+                    position: absolute;
+                    top: 0;
+                    right: -30px;
+                    font-weight: 900;
+                    font-size: 0.6rem;
+                }
+            }
+        }
+        .col-single-content {
+            &__top {
+                margin-bottom: 15px;
+            }           
+            &__meta {
+                color: $light-grey;
+                .after {
+                    font-family: Helvetica, Arial, sans-serif;
+                    font-size: 0.85rem;
+                    line-height: 1rem;
+                    display: inline-block;
+                }
+                .pre {
+                    font-size: 0.85rem;
+                    line-height: 1rem;
+                    display: inline-block;
+                    margin-right: 5px;
+                }
+                @media screen and (max-width: 576px) {
+                    display: block!important;
+                }
+            }
+            &__tags {
+                margin-left: 50px;
+                .pre {
+                    font-size: 0.85rem;
+                    margin-right: 5px;
+                    display: inline-block;
+                    color: $light-grey;
+                }
+                .single-tag {
+                    color: $light-grey;
+                    font-size: 0.85rem;
+                    margin-right: 3px;
+                    display: inline-block;
+                    font-weight: 800;
+                }
+                @media screen and (max-width: 576px) {
+                    display: block!important;
+                    margin-left: 0;
+                }
+            }
+            &__img {
+                max-width: 100%;
+                max-height: 200px;
+                margin-top: 6px;
+                margin-bottom: 15px;
+                margin-left: 10px;
+            }
+            &__paragraph {
+                color: $dark-grey;
+                font-size: 0.9rem;
+            }
+        }
+        .divider {
+            margin: 30px 15px;
+        }
+        .section-header {
+            &--bottom {
+                margin-left: 15px;
+                margin-right: 15px; 
+                margin-bottom: 30px;
+            }
+        }
+
+        .col-related {
+            &__meta {
+                font-family: Helvetica, Arial, sans-serif;
+                font-size: 0.85rem;
+                color: $light-grey;
+            }
+            &__header {
+                font-weight: 800;
+                color: $dark-grey;
+                margin-top: 7px;
+                margin-bottom: 15px;
+                font-size: 1rem;
+            }
+            &__paragraph {
+                font-size: 0.8rem;
+                color: $paragraph-color;
+            }
+            &__link {
+                color: $dark-grey;
+                transition: $transition;
+                &:hover {
+                    text-decoration: none;
+                    color: lighten($dark-grey, 10%);
+                }
+            }
+            @media screen and (max-width: 767px) {
+                margin-bottom: 30px;
+            }
+        }
+        margin-bottom: 60px;
     }
 }
