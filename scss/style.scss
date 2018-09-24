@@ -93,11 +93,11 @@ html {
         .col-last-content, .section-header {
             background-color: transparent!important;
         }
-    }
-    .carousel-indicators {
-        li {
-            &.active {
-                background-color: $color-3!important;
+        .carousel-indicators {
+            li {
+                &.active {
+                    background-color: $color-3!important;
+                }
             }
         }
     }
@@ -207,11 +207,12 @@ html {
         position: relative;
 
         &:after {
-            content: '\f054';
-            font-family: FontAwesome;
+            content: "\f054";
+            font-family: "Font Awesome 5 Free";
             position: absolute;
             top: 0;
             right: -20px;
+            font-weight: 900;
         }
 
         &:hover {
@@ -398,7 +399,7 @@ html {
 
 .dropdown-toggle::after {
     content: '\f078';
-    font-family: 'FontAwesome';
+    font-family: 'Font Awesome 5 Free';
     font-size: 0.6rem;
     border: none;
     margin: 0;
@@ -406,6 +407,7 @@ html {
     position: absolute;
     top: 0.8rem;
     right: 0;
+    font-weight: 900;
 }
 
 //Header
@@ -656,24 +658,26 @@ html {
                 text-decoration: none;
 
                 &:after {
-                    content: '\f054';
-                    font-family: FontAwesome;
+                    content: "\f054";
+                    font-family: "Font Awesome 5 Free";
                     position: absolute;
                     top: 8px;
                     right: -50px;
                     font-size: 1rem;
+                    font-weight: 900;
                 }
 
             }
 
             @media screen and (max-width: 500px) {
                 &:after {
-                    content: '\f054';
-                    font-family: FontAwesome;
+                    content: "\f054";
+                    font-family: "Font Awesome 5 Free";
                     position: absolute;
                     top: 0;
                     right: -50px;
                     font-size: 1rem;
+                    font-weight: 900;
                 }
             }
         }
@@ -815,12 +819,13 @@ html {
 
         @media screen and (max-width: 992px) {
             &:after {
-                content: '\f054';
-                font-family: FontAwesome;
+                content: "\f054";
+                font-family: "Font Awesome 5 Free";
                 position: absolute;
                 top: 10px;
                 right: 0;
                 font-size: 1rem;
+                font-weight: 900;
             }
         }
     }
@@ -1150,11 +1155,12 @@ html {
 
         &:after {
             content: '\f054';
-            font-family: FontAwesome;
+            font-family: 'Font Awesome 5 Free'!important;
             position: absolute;
             top: 2px;
             right: 0;
             font-size: 1rem;
+            font-weight: 900;
         }
 
         &:hover {
@@ -1236,12 +1242,13 @@ html {
         }
 
         &:after {
-            content: '\f054';
-            font-family: FontAwesome;
+            content: "\f054";
+            font-family: "Font Awesome 5 Free";
             position: absolute;
             top: 2px;
             right: 0;
             font-size: 1rem;
+            font-weight: 900;
         }
     }
 

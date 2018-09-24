@@ -44,8 +44,8 @@ html {
       background-image: linear-gradient(to right, transparent, #000); }
     html.high-contrast * .col-last-content, html.high-contrast * .section-header {
       background-color: transparent !important; }
-  html .carousel-indicators li.active {
-    background-color: #fcff01 !important; }
+    html.high-contrast * .carousel-indicators li.active {
+      background-color: #fcff01 !important; }
 
 .section-header {
   font-family: Raleway, sans-serif;
@@ -124,11 +124,12 @@ html {
     display: block;
     position: relative; }
     .column-header__link:after {
-      content: '\f054';
-      font-family: FontAwesome;
+      content: "\f054";
+      font-family: "Font Awesome 5 Free";
       position: absolute;
       top: 0;
-      right: -20px; }
+      right: -20px;
+      font-weight: 900; }
     .column-header__link:hover {
       text-decoration: none;
       color: #3b3b3b; }
@@ -255,14 +256,15 @@ html {
 
 .dropdown-toggle::after {
   content: '\f078';
-  font-family: 'FontAwesome';
+  font-family: 'Font Awesome 5 Free';
   font-size: 0.6rem;
   border: none;
   margin: 0;
   vertical-align: 0;
   position: absolute;
   top: 0.8rem;
-  right: 0; }
+  right: 0;
+  font-weight: 900; }
 
 .row-header {
   margin-top: 50px;
@@ -435,20 +437,22 @@ html {
       position: relative;
       text-decoration: none; }
       .top-bar__inner .section-link:after {
-        content: '\f054';
-        font-family: FontAwesome;
+        content: "\f054";
+        font-family: "Font Awesome 5 Free";
         position: absolute;
         top: 8px;
         right: -50px;
-        font-size: 1rem; } }
+        font-size: 1rem;
+        font-weight: 900; } }
   @media screen and (max-width: 500px) {
     .top-bar__inner .section-link:after {
-      content: '\f054';
-      font-family: FontAwesome;
+      content: "\f054";
+      font-family: "Font Awesome 5 Free";
       position: absolute;
       top: 0;
       right: -50px;
-      font-size: 1rem; } }
+      font-size: 1rem;
+      font-weight: 900; } }
   @media screen and (max-width: 992px) {
     .top-bar__inner .section-header {
       margin-bottom: 3px;
@@ -541,12 +545,13 @@ html {
   position: relative; }
   @media screen and (max-width: 992px) {
     .simple-content.timetable-wrap:after {
-      content: '\f054';
-      font-family: FontAwesome;
+      content: "\f054";
+      font-family: "Font Awesome 5 Free";
       position: absolute;
       top: 10px;
       right: 0;
-      font-size: 1rem; } }
+      font-size: 1rem;
+      font-weight: 900; } }
 
 .col-timetable {
   margin-bottom: 30px; }
@@ -780,11 +785,12 @@ html {
     .public-transportation__link:after,
     .tickets__link:after {
       content: '\f054';
-      font-family: FontAwesome;
+      font-family: "Font Awesome 5 Free" !important;
       position: absolute;
       top: 2px;
       right: 0;
-      font-size: 1rem; }
+      font-size: 1rem;
+      font-weight: 900; }
     .public-transportation__link:hover,
     .tickets__link:hover {
       color: #e5e7f8;
@@ -842,12 +848,13 @@ html {
       color: #3b3b3b;
       text-decoration: none; }
     .write__link:after {
-      content: '\f054';
-      font-family: FontAwesome;
+      content: "\f054";
+      font-family: "Font Awesome 5 Free";
       position: absolute;
       top: 2px;
       right: 0;
-      font-size: 1rem; }
+      font-size: 1rem;
+      font-weight: 900; }
   @media screen and (max-width: 992px) {
     .write {
       margin-top: 0; } }
